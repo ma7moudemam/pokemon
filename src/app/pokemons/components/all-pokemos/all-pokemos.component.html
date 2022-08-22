@@ -1,0 +1,15 @@
+<div>
+    <div class="pokeInfo">
+        <h1 class="title">Pokédex</h1>
+        <p class="info">Search for a Pokémon by name or using its National Pokédex number.</p>
+        <div class="searchBar">
+            <input class="search" type="text" placeholder="Search Pokémon..."/>
+            <img class="searchButton" src="../../../../assets/pokemon-Search.svg" alt="Search"/>
+        </div>
+    </div>
+    <div class="pokemons" >
+        <app-pokemon *ngFor="let pokemon of pokemons" [pokemon]="pokemon" [number]="pokemons.indexOf(pokemon)"></app-pokemon>
+    </div>
+</div>
+
+

@@ -1,0 +1,15 @@
+.header{
+    background-color: #726B8F;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header img{
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+<div class="details">
+    <div class="main-details">
+        <p class="number">{{pokemon.id}}</p>
+        <div class="detials-skills">
+            <h2 class="titel">{{pokemon.name}}</h2>
+            <div class="skills">
+                <p *ngFor="let type of types">{{type}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="details-info">
+        <div class="details-img">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/crystal/{{pokemon.id}}.png" alt="">
+        </div>
+        <div class="pokemon-description">
+            <ul>
+                <li routerLink="forms/{{pokemon.id}}">Forms</li>
+                <li routerLink="detail/{{pokemon.id}}">Detail</li>
+                <li routerLink="types/{{pokemon.id}}">Types</li>
+                <li routerLink="stats/{{pokemon.id}}">Stats</li>
+                <li routerLink="wear/{{pokemon.id}}">Wear</li>
+            </ul>
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
