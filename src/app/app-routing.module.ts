@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'pokemons', component: AllPokemosComponent },
   { path: 'details/:id', component: PokemonDetailsComponent , 
     children: [
-      { path: 'forms/:id' , component: PokemonFormsComponent},
+      {path: 'forms/:id' , component: PokemonFormsComponent},
       {path:'detail/:id' , component:PokemonDetailComponent},
       {path:'types/:id' , component: PokemonTypesComponent},
       {path:'stats/:id' , component: PokemonStatsComponent},

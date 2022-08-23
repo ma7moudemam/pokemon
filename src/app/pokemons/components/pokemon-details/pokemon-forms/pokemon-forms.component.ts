@@ -10,7 +10,7 @@ import { PokemonService } from 'src/app/pokemons/services/pokemon.service';
 export class PokemonFormsComponent implements OnInit {
 
   id:any;
-  forms:any[]=[];
+  forms:any;
   constructor(private route:ActivatedRoute , private service:PokemonService) {
     this.id=this.route.snapshot.paramMap.get('id');
   }
@@ -21,7 +21,7 @@ export class PokemonFormsComponent implements OnInit {
 
   getForms(){
     this.service.getPokemonForms(this.id).subscribe((res:any)=>{
-      this.forms = res.sprites.map();
+      this.forms = Object.keys(res.sprites).map(key =>res.sprites[key]);
       console.log(this.forms)
     })
   }
